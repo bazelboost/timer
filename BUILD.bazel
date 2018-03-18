@@ -19,6 +19,9 @@ cc_library(
 		"BOOST_ALL_NO_LIB=1"
 	],
 	deps = [
-		"@com_github_bazelboost_config//:config"
+		"@com_github_bazelboost_config//:config",
+		"@com_github_bazelboost_core//:core",
+		"@com_github_bazelboost_system//:system",
+		"@com_github_bazelboost_chrono//:chrono"
 	],
 )
