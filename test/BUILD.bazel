@@ -1,0 +1,45 @@
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
+cc_test(
+    name = "chrono_conflict_test",
+    srcs = ["chrono_conflict_test.cpp"],
+    deps = [
+        "//:timer",
+        "@boost//chrono",
+        "@boost//move",
+    ],
+)
+
+cc_test(
+    name = "cpu_timer_info",
+    srcs = ["cpu_timer_info.cpp"],
+    deps = [
+        "//:timer",
+        "@boost//chrono",
+        "@boost//detail",
+    ],
+)
+
+cc_test(
+    name = "cpu_timer_test",
+    srcs = ["cpu_timer_test.cpp"],
+    deps = [
+        "//:timer",
+        "@boost//detail",
+    ],
+)
+
+cc_test(
+    name = "original_timer_test",
+    srcs = ["original_timer_test.cpp"],
+    deps = ["//:timer"],
+)
+
+cc_test(
+    name = "progress_display_test",
+    srcs = ["progress_display_test.cpp"],
+    deps = [
+        "//:timer",
+        "@boost//core",
+    ],
+)

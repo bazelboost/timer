@@ -1,0 +1,15 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "timer",
+    visibility = ["//visibility:public"],
+    includes = ["include"],
+    defines = ["BOOST_ALL_NO_LIB"],
+    hdrs = glob(["include/boost/**/*.hpp"]),
+    srcs = glob(["src/**/*.cpp"]),
+    deps = [
+        "@boost//config",
+        "@boost//system",
+        "@boost//chrono",
+    ],
+)
