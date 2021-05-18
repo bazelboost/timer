@@ -8,8 +8,8 @@ cc_library(
     hdrs = glob(["include/boost/**/*.hpp"]),
     srcs = glob(["src/**/*.cpp"]),
     deps = [
-        "@boost//config",
-        "@boost//system",
-        "@boost//chrono",
+        "@boost//libs/config",
+        "@boost//libs/system",
+        "@boost//libs/chrono",
     ],
 )

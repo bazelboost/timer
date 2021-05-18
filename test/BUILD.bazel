@@ -5,8 +5,8 @@ cc_test(
     srcs = ["chrono_conflict_test.cpp"],
     deps = [
         "//:timer",
-        "@boost//chrono",
-        "@boost//move",
+        "@boost//libs/chrono",
+        "@boost//libs/move",
     ],
 )
 
@@ -15,8 +15,8 @@ cc_test(
     srcs = ["cpu_timer_info.cpp"],
     deps = [
         "//:timer",
-        "@boost//chrono",
-        "@boost//detail",
+        "@boost//libs/chrono",
+        "@boost//libs/detail",
     ],
 )
 
@@ -25,7 +25,7 @@ cc_test(
     srcs = ["cpu_timer_test.cpp"],
     deps = [
         "//:timer",
-        "@boost//detail",
+        "@boost//libs/detail",
     ],
 )
 
@@ -40,6 +40,6 @@ cc_test(
     srcs = ["progress_display_test.cpp"],
     deps = [
         "//:timer",
-        "@boost//core",
+        "@boost//libs/core",
     ],
 )
